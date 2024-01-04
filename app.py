@@ -4,7 +4,7 @@ import pandas as pd
 
 # Setting custom title for the browser tab
 st.set_page_config(
-    page_title="CO2 Emissions Predictor | Samit",
+    page_title="EcoVisionary Predictor | Samit",
     page_icon="🌿",
     layout="wide",
 )
