@@ -2,6 +2,13 @@ import streamlit as st
 import joblib
 import pandas as pd
 
+# Setting custom title for the browser tab
+st.set_page_config(
+    page_title="CO2 Emissions Predictor | Samit",
+    page_icon="🌿",
+    layout="wide",
+)
+
 # Load the pre-trained model
 model = joblib.load('co2_emit_pred_model.pkl')
 
@@ -24,13 +31,13 @@ df = pd.read_csv('co2_emissions.csv', sep=';')
 st.markdown(
     """
     <div style="font-family: Times New Roman; font-size:50px;">
-        CO2 Emissions Prediction
+        CO2 Emissions Predictor
     </div>
     """, 
     unsafe_allow_html=True
 )
 # User input form
-st.sidebar.header('User Input')
+st.sidebar.header('Select Input Features Here...')
 make = st.sidebar.selectbox('Make', df['make'].unique())
 model_name = st.sidebar.selectbox('Model', df['model'].unique())
 vehicle_class = st.sidebar.selectbox('Vehicle Class', df['vehicle_class'].unique())
@@ -66,9 +73,9 @@ if st.sidebar.button('Predict CO2 Emissions'):
 # Adding "Developed by Samit Dhawal" at the bottom right
 st.markdown(
     """
-    <div style="position: fixed; bottom: 15px; right: 20px; text-align: right; font-size:15px; font-family: Courier new">
+    <div style="position: fixed; bottom: 1%; left: 50%; text-align: left; font-size:15px; font-family: Cursive">
         Developed by <span style="font-family: Brush Script MT; font-size:25px"><a href=https://linkedin.com/in/samit-dhawal/ style="color:#ff4b4b" >Samit Dhawal </a></span>
     </div>
-    """, 
+    """,
     unsafe_allow_html=True
 )
