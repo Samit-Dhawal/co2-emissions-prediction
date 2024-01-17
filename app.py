@@ -74,7 +74,7 @@ if st.sidebar.button('Predict CO2 Emissions'):
 st.markdown(
     """
     <div style="position: fixed; bottom: 1%; left: 50%; text-align: left; font-size:15px; font-family: Cursive">
-        Developed by <span style="font-family: Brush Script MT; font-size:25px"><a href=https://linkedin.com/in/samit-dhawal/ style="color:#ff4b4b" >Samit Dhawal </a></span>
+        Developed by <span style="font-family: Brush Script MT; font-size:25px"><a href=https://linkedin.com/in/samitdhawal/ style="color:#ff4b4b" >Samit Dhawal </a></span>
     </div>
     """,
     unsafe_allow_html=True
